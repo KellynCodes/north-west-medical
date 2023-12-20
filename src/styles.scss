@@ -1,0 +1,114 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$sosinc-primary: mat.define-palette(mat.$indigo-palette);
+$sosinc-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$sosinc-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$sosinc-theme: mat.define-light-theme((
+  color: (
+    primary: $sosinc-primary,
+    accent: $sosinc-accent,
+    warn: $sosinc-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($sosinc-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+// .section{
+//   @apply sm:mt-20 md:mt-32;
+// }
+
+body{
+     @apply font-sans overflow-x-hidden;
+}
+
+.slick-slide > div {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+
+
+.slick-dots li .slick-active button:before{
+ color: #BFD2F8 !important;
+}
+
+.slick-dots li button:before {
+  color: #FCFEFE;
+  font-size: 20px !important;
+  margin: 2rem 0 0 0 !important;
+}
+
+
+
+/* Define the styles for the scrollbar track and thumb */
+/* Define the styles for the scrollbar track and thumb */
+/* This will work in some modern browsers (e.g., Chrome) */
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar {
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+ @apply bg-primary; /* color of the scrollbar thumb */
+}
+
+/* Handle when the user hovers over the thumb */
+::-webkit-scrollbar-thumb:hover {
+@apply bg-primary; /* color of the thumb on hover */
+}
+
+/* Track (background of the scrollbar) when not hovering over the thumb */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle when the user hovers over the track */
+::-webkit-scrollbar-track:hover {
+  background: #ddd;
+}
+
+/* Corner (between the vertical and horizontal scrollbars) */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}

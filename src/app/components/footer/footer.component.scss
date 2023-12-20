@@ -1,0 +1,7 @@
+ul li{
+    @apply flex items-center justify-start px-3;
+}
+
+ul li a{
+    @apply text-sm md:text-base text-white hover:text-hover;
+}
