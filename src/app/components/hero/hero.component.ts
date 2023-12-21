@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+import { ButtonComponent } from '../button/button.component';
+
+@Component({
+  selector: 'nwmedsurg-hero',
+  standalone: true,
+  imports: [ButtonComponent],
+  templateUrl: './hero.component.html',
+})
+export class HeroComponent {}

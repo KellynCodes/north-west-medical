@@ -12,7 +12,7 @@ export class TemplatePageTitleStrategy extends TitleStrategy {
     const title = this.buildTitle(routerState);
     if (title !== undefined) {
       this.title.setTitle(
-        `NORTHWEST MEDICAL SURGICAL ASSOCIATES, INC. | ${title}`
+        `Northwest Medical Surgical Associates. | ${title}`
       );
     }
   }

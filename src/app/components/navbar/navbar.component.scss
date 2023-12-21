@@ -16,7 +16,7 @@ ul li a{
 
   @media(max-width: 768px){
       .navbar{
-          @apply fixed w-[50vw] h-[80vh] bg-white flex-col gap-5 right-0 top-[17%] md:top-[13.5%] shadow;
+          @apply fixed w-[50vw] h-[80vh] bg-white flex-col gap-5 right-0 top-[11%] md:top-[13.5%] shadow;
         }
         
         .navbar.close{

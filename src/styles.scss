@@ -12,26 +12,26 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$sosinc-primary: mat.define-palette(mat.$indigo-palette);
-$sosinc-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$mwmedsurg-primary: mat.define-palette(mat.$indigo-palette);
+$mwmedsurg-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$sosinc-warn: mat.define-palette(mat.$red-palette);
+$mwmedsurg-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$sosinc-theme: mat.define-light-theme((
+$mwmedsurg-theme: mat.define-light-theme((
   color: (
-    primary: $sosinc-primary,
-    accent: $sosinc-accent,
-    warn: $sosinc-warn,
+    primary: $mwmedsurg-primary,
+    accent: $mwmedsurg-accent,
+    warn: $mwmedsurg-warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($sosinc-theme);
+@include mat.all-component-themes($mwmedsurg-theme);
 
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
@@ -53,12 +53,9 @@ li{
     list-style-type: none;
 }
 
-// .section{
-//   @apply sm:mt-20 md:mt-32;
-// }
 
 body{
-     @apply font-sans overflow-x-hidden;
+     @apply font-sans bg-white;
 }
 
 .slick-slide > div {
@@ -86,16 +83,17 @@ body{
 
 /* Track (the background of the scrollbar) */
 ::-webkit-scrollbar {
+  @apply w-2;
 }
 
 /* Thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
- @apply bg-primary; /* color of the scrollbar thumb */
+ @apply bg-primary rounded-md transition-all duration-200;
 }
 
 /* Handle when the user hovers over the thumb */
 ::-webkit-scrollbar-thumb:hover {
-@apply bg-primary; /* color of the thumb on hover */
+  @apply bg-primary cursor-grab;
 }
 
 /* Track (background of the scrollbar) when not hovering over the thumb */

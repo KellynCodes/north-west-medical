@@ -1,0 +1,8 @@
+.insurance{
+    @apply relative my-6;
+}
+
+.insurance::before{
+    content: "Insurance";
+    @apply w-48 h-full bg-primary text-white font-semibold text-3xl -skew-x-6 md:-skew-x-[17deg] left-[35%] absolute z-0;
+}
