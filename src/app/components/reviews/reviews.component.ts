@@ -31,5 +31,5 @@ export class ReviewsComponent {
       },
     ],
   };
-  slides = signal<ReviewDto[]>(Reviews);
+  reviews = signal<ReviewDto[]>(Reviews);
 }

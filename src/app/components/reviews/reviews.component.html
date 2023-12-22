@@ -1,4 +1,4 @@
-<div class="review-container">
+<div id="reviews" class="review-container">
   <h1
     class="w-fit h-auto mx-auto text-white text-3xl font-bold text-center mb-6 border-b-2 border-accent py-2 z-50"
   >
@@ -9,7 +9,7 @@
     #slickModal="slick-carousel"
     [config]="sliderConfig"
   >
-    @for (slide of slides(); track slide.id) {
+    @for (review of reviews(); track review.id) {
     <div
       ngxSlickItem
       class="w-full h-full flex flex-col items-center justify-center gap-6 p-4 md:p-8"
@@ -25,14 +25,14 @@
         <p
           class="text-white font-normal leading-[1.925rem ] text-base text-center"
         >
-          {{ slide.content }}
+          {{ review.content }}
         </p>
 
         <hr class="bg-accent h-[1.5px] w-[60%] mx-auto my-4" />
         <h5
           class="text-white text-center text-lg leading-[1.925rem] font-normal"
         >
-          {{ slide.name }}, {{ slide.title }}
+          {{ review.name }}, {{ review.title }}
         </h5>
       </div>
     </div>

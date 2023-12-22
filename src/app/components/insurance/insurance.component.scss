@@ -4,5 +4,5 @@
 
 .insurance::before{
     content: "Insurance";
-    @apply w-48 h-full bg-primary text-white font-semibold text-3xl -skew-x-6 md:-skew-x-[17deg] left-[35%] absolute z-0;
+    @apply w-48 h-full bg-primary text-white font-semibold text-3xl -skew-x-6 md:-skew-x-[17deg] left-[10%] md:left-[35%] absolute z-0;
 }
