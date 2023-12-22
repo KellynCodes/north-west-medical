@@ -1,0 +1,41 @@
+<div class="review-container">
+  <h1
+    class="w-fit h-auto mx-auto text-white text-3xl font-bold text-center mb-6 border-b-2 border-accent py-2 z-50"
+  >
+    Reviews
+  </h1>
+  <ngx-slick-carousel
+    class="flex items-center justify-center w-full sm:[80%] md:w-[95%] z-50 px-4"
+    #slickModal="slick-carousel"
+    [config]="sliderConfig"
+  >
+    @for (slide of slides(); track slide.id) {
+    <div
+      ngxSlickItem
+      class="w-full h-full flex flex-col items-center justify-center gap-6 p-4 md:p-8"
+    >
+      <img
+        class="mx-auto my-4"
+        src="../../../assets/svgs/quote.svg"
+        width="45"
+        height="30"
+        alt="quote"
+      />
+      <div class="w-full h-full flex flex-col items-center justify-center p-4">
+        <p
+          class="text-white font-normal leading-[1.925rem ] text-base text-center"
+        >
+          {{ slide.content }}
+        </p>
+
+        <hr class="bg-accent h-[1.5px] w-[60%] mx-auto my-4" />
+        <h5
+          class="text-white text-center text-lg leading-[1.925rem] font-normal"
+        >
+          {{ slide.name }}, {{ slide.title }}
+        </h5>
+      </div>
+    </div>
+    }
+  </ngx-slick-carousel>
+</div>

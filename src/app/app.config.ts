@@ -21,7 +21,10 @@ export const appConfig: ApplicationConfig = {
     }),
     provideRouter(
       routes,
-      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'enabled',
+      })
     ),
     {
       provide: TitleStrategy,

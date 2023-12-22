@@ -2,7 +2,7 @@
   class="sticky top-0 w-full h-[5rem] bg-gray-100 flex items-center justify-between gap[2%] px-0 md:px-4 z-[999999]"
 >
   <div
-    class="flex items-center justify-center h-full w-[48%] sm:w-[18%] bg-primary"
+    class="flex items-center justify-center h-full w-[48%] md:w-[18%] bg-primary"
   >
     <a routerLink="/">
       <h1 class="text-white font-semibold text-base">NorthWest Med Surgical</h1>
@@ -13,22 +13,19 @@
       class="w-full h-full flex flex-col md:flex-row items-center justify-evenly"
     >
       <li (click)="toggle()">
-        <a href="#home">Home</a>
+        <a routerLink="" fragment="home">Home</a>
       </li>
       <li (click)="toggle()">
-        <a href="#insurance">Insurance</a>
+        <a routerLink="" fragment="insurance">Insurance</a>
       </li>
       <li (click)="toggle()">
-        <a href="#providers">Providers</a>
+        <a routerLink="" fragment="providers">Providers</a>
       </li>
       <li (click)="toggle()">
-        <a href="#overview">Overview</a>
+        <a routerLink="" fragment="location">Location</a>
       </li>
       <li (click)="toggle()">
-        <a href="#location">Location</a>
-      </li>
-      <li (click)="toggle()">
-        <a href="#reviews">Reviews</a>
+        <a routerLink="" fragment="reviews">Reviews</a>
       </li>
       <div
         (click)="toggle()"
@@ -37,7 +34,8 @@
         <sosinc-button
           className="bg-accent text-sm lg:text-base text-white hover:bg-hover"
           label="Contact Us"
-          link="/contact"
+          link=""
+          fragment="contact"
         />
       </div>
     </ul>
@@ -49,7 +47,8 @@
     <sosinc-button
       className="bg-accent text-white hover:bg-hover"
       label="Contact Us"
-      link="/contact"
+      link="/"
+      fragment="contact"
     />
 
     <div

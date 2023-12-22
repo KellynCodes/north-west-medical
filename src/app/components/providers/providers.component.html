@@ -1,0 +1,30 @@
+<div id="providers" class="w-full h-auto flex flex-col p-4 my-8">
+  <h1
+    class="w-fit h-auto mx-auto text-primary text-3xl font-bold text-center mb-6 border-b-2 border-accent py-2"
+  >
+    Providers
+  </h1>
+
+  <div
+    class="w-full h-auto flex flex-wrap items-center justify-evenly gap-4 p-4"
+  >
+    @for(provider of [1,2,3,4]; track $index){
+    <div
+      class="w-full sm:w-72 h-80 flex flex-col items-center justify-center rounded-lg"
+    >
+      <img
+        class="w-full h-[80%] rounded-t-sm"
+        src="../../../assets/images/hero.jpeg"
+        [alt]="$index"
+      />
+      <div
+        class="w-full h-[20%] flex flex-col items-center justify-evenly gap-y-3 -y-8 px-4 bg-primary rounded-b-sm"
+      >
+        <h3 class="text-white">John Doe.</h3>
+
+        <p class="text-white font-semibold">Family Medicine Specialist.</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>

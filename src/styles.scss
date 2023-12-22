@@ -58,24 +58,36 @@ body{
      @apply font-sans bg-white;
 }
 
-.slick-slide > div {
-  margin-right: 0.5rem !important;
-  margin-left: 0.5rem !important;
+
+.slick-dots li button::before{
+  content: "";
+ font-size: 10px !important;
 }
 
-
-
-.slick-dots li .slick-active button:before{
- color: #BFD2F8 !important;
+.slick-dots li:hover button::before{
+ font-size: 20px !important;
+ color: #ef4444cd !important;
 }
 
-.slick-dots li button:before {
-  color: #FCFEFE;
-  font-size: 20px !important;
-  margin: 2rem 0 0 0 !important;
+.slick-dots .slick-active button::before{
+ font-size: 20px !important;
+   color: #ef4444cd !important;
+   color: transparent;
 }
 
+.slick-prev::before,
+.slick-next::before {
+  background-color: #fff !important;
+  color: #ef4444cd !important;
+  border-radius: 50%;
+}
 
+@media(max-width: 640px){
+  .slick-prev::before,
+.slick-next::before {
+  display: none !important;
+}
+}
 
 /* Define the styles for the scrollbar track and thumb */
 /* Define the styles for the scrollbar track and thumb */

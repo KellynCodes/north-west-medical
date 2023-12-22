@@ -1,0 +1,32 @@
+<section class="flex flex-col items-center justify-center w-full h-auto mb-12">
+  <h1 class="font-bold text-3xl text-black capitalize text-center my-4">
+    Frequently Asked questions
+  </h1>
+  <div
+    class="flex flex-col itemes-center justify-evenly gap-5 rounded-sm w-full h-auto"
+  >
+    <div
+      class="flex flex-col w-full md:w-[85%] mx-auto max-h-[40rem] overflow-y-scroll p-6"
+    >
+      @for (faq of faqs(); track faq.id) {
+      <mat-accordion
+        class="!min-w-full h-fit flex flex-col items-center justify-between gap-8 my-2"
+      >
+        <mat-expansion-panel class="!min-w-full">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="">
+              <h5 class="text-sm md:text-lg">
+                {{ faq.question }}
+              </h5>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <hr class="bg-white h-[1px] w-full my-2" />
+          <p class="text-xs md:text-base">
+            {{ faq.answer }}
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      }
+    </div>
+  </div>
+</section>
