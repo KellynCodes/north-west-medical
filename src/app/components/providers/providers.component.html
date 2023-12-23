@@ -8,21 +8,21 @@
   <div
     class="w-full h-auto flex flex-wrap items-center justify-evenly gap-4 p-4"
   >
-    @for(provider of [1,2,3,4]; track $index){
+    @for(provider of providers(); track provider.id){
     <div
       class="w-full sm:w-72 h-80 flex flex-col items-center justify-center rounded-lg"
     >
       <img
         class="w-full h-[80%] rounded-t-sm"
-        src="../../../assets/images/hero.jpeg"
-        [alt]="$index"
+        [src]="provider.imageLink"
+        [alt]="provider.name"
       />
       <div
         class="w-full h-[20%] flex flex-col items-center justify-evenly gap-y-3 -y-8 px-4 bg-primary rounded-b-sm"
       >
-        <h3 class="text-white">John Doe.</h3>
+        <h3 class="text-white">{{ provider.name }}</h3>
 
-        <p class="text-white font-semibold">Family Medicine Specialist.</p>
+        <p class="text-white font-semibold">{{ provider.title }}</p>
       </div>
     </div>
     }

@@ -7,3 +7,4 @@ export * from './insurance/insurance.component';
 export * from './cta/cta.component';
 export * from './providers/providers.component';
 export * from './reviews/reviews.component';
+export * from './location/location.component';

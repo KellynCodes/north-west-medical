@@ -3,45 +3,38 @@ import { ReviewDto } from '../types';
 export const Reviews: ReviewDto[] = [
   {
     id: 1,
-    name: 'Dr. Emily Rodriguez',
-    title: ' Orthopedic Spine Surgeon',
-    content:
-      "I can't thank Dr. Rodriguez enough for the exceptional care and expertise she provided during my spinal surgery. Her thorough explanations and genuine concern for my well-being immediately put me at ease. The surgery was a success, and I am now pain-free and able to enjoy life again. Dr. Rodriguez's skill as an orthopedic spine surgeon is truly remarkable.",
+    name: 'Sarah',
+    review:
+      'I recently had a medical surgery at Northwest Medical Surgical Associates, and the entire experience was exceptional. The staff was caring, the surgeons were highly skilled, and the facilities were top-notch. The website provided valuable information, making it easy to schedule my consultation. I highly recommend their services for anyone in need of medical surgeries.',
   },
   {
     id: 2,
-    name: 'Dr. James Thompson',
-    title: 'Knee Replacement Specialist',
-    content:
-      "I recently underwent a knee replacement surgery performed by Dr. Thompson, and I couldn't be happier with the results. His attention to detail, personalized approach, and commitment to patient education set him apart. Thanks to Dr. Thompson, I now have increased mobility and can resume activities I thought were a distant memory. I highly recommend Dr. Thompson to anyone considering knee surgery.",
+    name: 'John',
+    review:
+      'Northwest Medical Surgical Associates exceeded my expectations. The website was informative, guiding me through the pre-operative and post-operative phases. The surgeon was incredibly professional and took the time to address all my concerns. The recovery process was smooth, and I appreciate the quality of care provided. A trustworthy and reliable medical surgery center.',
   },
   {
     id: 3,
-    name: 'Dr. Sarah Chang',
-    title: 'Pediatric Orthopedic Specialist',
-    content:
-      "Dr. Chang's expertise in pediatric orthopedics is unmatched. She treated my child for a complex orthopedic condition with compassion and skill. Dr. Chang's ability to communicate effectively with both parents and young patients made the entire process much smoother. We are grateful for her dedication to ensuring the best possible outcome for our child.",
+    name: 'Emily.',
+    review:
+      "I found Northwest Medical Surgical Associates online and decided to schedule a virtual consultation. The process was straightforward, and the surgeon was thorough in explaining my surgical options. The website's user-friendly design made it easy to navigate and find essential information. I felt well-informed and confident in my decision to choose them for my medical procedure.",
   },
   {
     id: 4,
-    name: ' Dr. Michael Carter',
-    title: 'Sports Medicine Orthopedic Surgeon',
-    content:
-      "As an athlete, I had the privilege of being treated by Dr. Carter for a sports-related injury. His in-depth knowledge of sports medicine and commitment to individualized treatment plans played a pivotal role in my recovery. Dr. Carter's approach is not just about fixing the injury but also focuses on preventing future issues. I am back on the field, thanks to Dr. Carter's expertise.",
+    name: 'Michael',
+    review:
+      "The team at Northwest Medical Surgical Associates is outstanding. From the moment I walked in for my consultation to the day of my surgery, everyone was friendly and professional. The website's FAQs section was particularly helpful in addressing common concerns. I'm grateful for the positive experience and the successful outcome of my surgery.",
   },
   {
     id: 5,
-    name: 'Dr. Rachel Kim',
-    title: 'Hand and Wrist Surgeon',
-    content:
-      "I had been suffering from chronic hand and wrist pain for years before I found Dr. Kim. Her precise diagnosis and innovative surgical approach were exactly what I needed. Dr. Kim's dedication to staying current with the latest advancements in hand and wrist surgery is evident in the excellent results I experienced. I highly recommend Dr. Kim to anyone seeking a top-notch hand and wrist surgeon.",
+    name: 'Amanda',
+    review:
+      'I cannot express how grateful I am for the care I received at Northwest Medical Surgical Associates. The website provided detailed information about the surgical process, and the staff was always available to answer my questions. The surgeons are skilled, and the post-operative follow-up was thorough. I highly recommend their services to anyone seeking high-quality medical care.',
   },
-
   {
     id: 6,
-    name: ' Dr. Daniel Martinez',
-    title: 'Total Joint Replacement Specialist',
-    content:
-      "I recently underwent total hip replacement surgery performed by Dr. Martinez, and I couldn't be more satisfied with the outcome. From the initial consultation to post-surgery follow-ups, Dr. Martinez demonstrated unparalleled expertise and a genuine commitment to patient care. I am now pain-free and enjoying a level of mobility I thought was lost forever. Dr. Martinez is truly a master of his craft.",
+    name: 'David.',
+    review:
+      "Choosing Northwest Medical Surgical Associates was the right decision for my recent surgery. The website's clarity on the surgical procedures and recovery expectations gave me confidence in their expertise. The medical team was compassionate and attentive throughout the entire process. I appreciate their commitment to patient care and would recommend them without hesitation.",
   },
 ];

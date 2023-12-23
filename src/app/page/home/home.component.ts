@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {
-  ButtonComponent,
   HeroComponent,
   InsuranceComponent,
+  LocationComponent,
   ProvidersComponent,
   ReviewsComponent,
 } from '../../components';
@@ -15,6 +15,7 @@ import { FaqComponent } from '../../components/faq/faq.component';
     HeroComponent,
     InsuranceComponent,
     ProvidersComponent,
+    LocationComponent,
     ReviewsComponent,
     FaqComponent,
   ],
