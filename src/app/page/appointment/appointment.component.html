@@ -1,0 +1,144 @@
+<section
+  id="appointment"
+  class="mb-16 flex flex-col md:flex-row h-auto items-center"
+>
+  <div
+    class="w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 h-auto px-6 lg:px-16 xl:px-24 py-4 flex items-center justify-center"
+  >
+    <div class="w-full h-auto">
+      <h1
+        class="w-fit h-auto text-primary text-3xl font-bold text-center mb-6 border-b-2 border-accent py-2 z-50"
+      >
+        Book your appointment
+      </h1>
+      <p class="text-gray-700 mt-4">
+        You can enjoy your well being again by doing just one thing now! Book
+        your appointment with us. It takes just 20s to book your appointment
+        with us.
+      </p>
+
+      <form class="mt-6" [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="block text-gray-700">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            placeholder="Enter Full Name"
+            class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none"
+            autofocus
+          />
+          @if(appointmentForm.get('name')?.touched &&
+          appointmentForm.get('name')?.hasError('required')){
+          <h6 class="text-red-500">Name is required.</h6>
+          }
+        </div>
+
+        <div>
+          <label class="block text-gray-700">Your Email</label>
+          <input
+            type="text"
+            id="email"
+            formControlName="email"
+            placeholder="example@gmail.com"
+            class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none"
+          />
+          @if( appointmentForm.get('email')?.touched &&
+          appointmentForm.get('email')?.hasError('required')){
+
+          <h6 class="text-red-500">Email is required.</h6>
+          }
+        </div>
+
+        <div class="flex flex-col md:flex-row items-start mt-4 md:-mx-4">
+          <div class="w-full md:mx-4">
+            <label class="block text-gray-700">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              formControlName="phone"
+              placeholder="Enter Phone Number"
+              class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none"
+            />
+            @if( appointmentForm.get('phone')?.touched &&
+            appointmentForm.get('phone')?.hasError('pattern')){
+            <h6 class="text-red-500">Invalid phone number format.</h6>
+            }
+          </div>
+
+          <div class="w-full md:mx-4 mt-4 md:mt-0">
+            <label class="block text-gray-700">Treatment</label>
+            <div class="relative mt-1">
+              <select
+                id="department"
+                formControlName="department"
+                class="w-full px-4 py-3 rounded bg-gray-200 border focus:border-primary focus:bg-white focus:outline-none appearance-none"
+              >
+                <option value="">Select Department</option>
+                <option value="Joint Replacement">Joint Replacement</option>
+                <option value="Sports Medicine">Sports Medicine</option>
+                <option value="Physical Therapy">Physical Therapy</option>
+                <option value="Skin Care">Spin Care</option>
+              </select>
+
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+              @if( appointmentForm.get('department')?.touched &&
+              appointmentForm.get('department')?.hasError('required')){
+              <h6 class="text-red-500">Department is required.</h6>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full mt-4">
+          <label class="block text-gray-700">Message</label>
+          <textarea
+            id="message"
+            formControlName="message"
+            placeholder="Write message"
+            class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none resize-none"
+            rows="3"
+          ></textarea>
+          @if(appointmentForm.get('message')?.touched &&
+          appointmentForm.get('message')?.hasError('required')){
+
+          <h6 class="text-red-500">Message is required.</h6>
+          } @if(appointmentForm.get('message')?.touched &&
+          appointmentForm.get('message')?.hasError('minlength')){
+          <h6 class="text-red-500">
+            Message should be equal or greater than 100 characters.
+          </h6>
+          }
+        </div>
+
+        <button
+          type="submit"
+          class="w-full block bg-primary hover:bg-hover focus:bg-hover transition-all duration-[100ms] text-white font-semibold rounded px-4 py-3 mt-4"
+          [disabled]="isSending()"
+        >
+          {{ isSending() ? "Booking..." : "Book Appointment" }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="bg-primary rounded-br-3xl hidden lg:flex justify-center items-center text-white w-full md:w-1/2 h-screen"
+  >
+    <h1 class="text-center text-white font-bold text-5xl">
+      Make an appointment and will get back to you within 5 minutes
+    </h1>
+  </div>
+</section>

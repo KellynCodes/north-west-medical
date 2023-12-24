@@ -1,0 +1,114 @@
+<section
+  id="contact"
+  class="mb-28 flex flex-col md:flex-row h-auto items-center"
+>
+  <div
+    class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 h-auto px-6 lg:px-16 xl:px-24 py-4 flex items-center justify-center"
+  >
+    <div class="w-full h-100">
+      <h1
+        class="w-fit h-auto text-primary text-3xl font-bold text-center mb-6 border-b-2 border-accent py-2 z-50"
+      >
+        Get In Touch
+      </h1>
+      <p class="text-gray-700 mt-4">
+        We will be exited to get in touch with you! let us know if you have
+        anything to discuss with us--we gat you covered.
+      </p>
+
+      <form class="mt-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="block text-gray-700">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            formControlName="name"
+            placeholder="Enter Full Name"
+            class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none"
+            autofocus
+          />
+          @if( contactForm.get('name')?.touched &&
+          contactForm.get('name')?.hasError('required')){
+          <h6 class="text-red-500">Name is required.</h6>
+          }
+        </div>
+
+        <div class="flex flex-col md:flex-row items-start mt-4 md:-mx-4">
+          <div class="w-full md:mx-4">
+            <label class="block text-gray-700">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              formControlName="phone"
+              id="Phone"
+              placeholder="+1562-789-1935"
+              class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none"
+            />
+            @if(contactForm.get('phone')?.touched &&
+            contactForm.get('phone')?.hasError('pattern')){
+            <h6 class="text-red-500">Invalid phone number format.</h6>
+            }
+          </div>
+
+          <div class="w-full md:mx-4 mt-4 md:mt-0">
+            <label class="block text-gray-700">Email</label>
+            <div class="relative mt-1">
+              <input
+                name="email"
+                id="email"
+                formControlName="email"
+                placeholder="example@gmail.com"
+                class="w-full px-4 py-3 rounded bg-gray-200 border focus:border-primary focus:bg-white focus:outline-none appearance-none"
+              />
+              @if( contactForm.get('email')?.touched &&
+              contactForm.get('email')?.hasError('required')){
+              <h6 class="text-red-500">Email is required.</h6>
+              }
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full mt-4">
+          <label class="block text-gray-700">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            formControlName="message"
+            placeholder="Write message"
+            class="w-full px-4 py-3 rounded bg-gray-200 mt-1 border focus:border-primary focus:bg-white focus:outline-none resize-none"
+            rows="3"
+          ></textarea>
+          @if( contactForm.get('message')?.touched &&
+          contactForm.get('message')?.hasError('required')){
+          <h6 class="text-red-500">Message is required.</h6>
+          } @if(contactForm.get('message')?.touched &&
+          contactForm.get('message')?.hasError('minlength')){
+          <h6 class="text-red-500">
+            Message should be equal or greater than 150 characters.
+          </h6>
+          }
+        </div>
+
+        <button
+          type="submit"
+          class="w-full block bg-primary transition-all duration-[100ms] hover:bg-hover focus:bg-hover text-white font-semibold rounded px-4 py-3 mt-4"
+          [disabled]="isSending()"
+        >
+          {{ isSending() ? "Sending..." : "Send Message" }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="bg-primary rounded-br-3xl hidden lg:flex justify-center items-center text-white w-full md:w-1/2 h-screen"
+  >
+    <h1 class="text-center text-white font-bold text-5xl">
+      Do you have something important to discuss with us! Let get in touch.
+    </h1>
+  </div>
+</section>

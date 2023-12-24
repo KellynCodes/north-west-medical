@@ -56,9 +56,8 @@ li{
 
 
 body{
-     @apply font-sans bg-white;
+     @apply font-sans bg-white overflow-x-hidden;
 }
-
 
 .slick-dots li button::before{
   content: "";
