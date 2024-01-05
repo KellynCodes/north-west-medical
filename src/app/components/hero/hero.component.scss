@@ -1,0 +1,14 @@
+.hero-container {
+  @apply bg-transparent relative flex items-center justify-center flex-col min-h-screen w-full h-auto py-10 object-cover z-0;
+  background-image: url("../../../assets/images/hero.jpeg");
+  background-repeat: no-repeat;
+  background-position:  center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.hero-container::after {
+  content: "";
+  @apply h-auto w-screen bg-[#1f2b6c9b] inset-0 absolute z-0;
+}
+

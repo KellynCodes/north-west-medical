@@ -1,9 +1,10 @@
 <div
   class="bg-primary w-full md:w-[85%] h-1/2 flex flex-col items-center justify-center gap-y-4 z-[999] my-6 p-4 mx-auto"
 >
-  <h4 class="text-white text-base md:text-2xl font-semibold text-center my-4">
-    {{ textContent }}
-  </h4>
+  <h4
+    [innerHTML]="textContent"
+    class="text-white text-sm md:text-base font-semibold text-left md:text-center my-4"
+  ></h4>
   <sosinc-button
     label="Contact Us"
     link="/contact"

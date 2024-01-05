@@ -1,31 +1,27 @@
 <div
-  class="w-full h-auto lg:h-[80vh] gap-[2%] flex flex-col lg:flex-row items-center justify-between md:justify-center md:px-6 px-3 mb-8"
+  class="hero-container w-full h-auto lg:h-[80vh] gap-[2%] flex items-center justify-center md:px-6 px-3 mb-8"
 >
   <div
-    class="w-full h-full lg:w-[50%] flex flex-col items-center justify-center gap-8 px-2 py-4"
+    class="w-full h-full lg:w-[50%] flex flex-col items-center justify-center px-2 py-4 z-50"
   >
-    <h1 class="text-lg sm:text-2xl md:text-4xl text-primary font-bold">
-      Northwest Medical Surgical
-    </h1>
-    <p class="text-xl">
-      Northwest Medical Surgical in Saint Albans, VT specializes in General
-      Surgery and Family Medicine, open five days a week.
-    </p>
-    <p class="text-xl">148 FAIRFIELD ST Saint Albans ALBANS, VT, 05478</p>
+    <div
+      class="w-fit h-fit flex flex-col items-center justify-center gap-4 z-50"
+    >
+      <h1 class="text-lg sm:text-2xl md:text-4xl text-white font-bold">
+        Northwest Medical Surgical
+      </h1>
 
-    <sosinc-button
-      className="bg-accent hover:bg-hover text-white mt-4"
-      label="Make an Appointment"
-      link="/appointment"
-    />
-  </div>
-  <div class="w-full lg:w-[48%] h-full">
-    <img
-      class="bg-cover w-full h-full rounded-md"
-      src="../../../assets/images/hero.jpeg"
-      width="474"
-      height="316"
-      alt="Hero Image"
-    />
+      <p class="text-xl text-white text-center">
+        Northwest Medical Surgical Associates offers primary care services to
+        people of all ages. Some minor illnesses can now even be diagnosed and
+        treated online during virtual visits.
+      </p>
+
+      <sosinc-button
+        className="bg-accent hover:bg-hover text-white mt-4 mx-auto"
+        label="Make an Appointment"
+        link="/appointment"
+      />
+    </div>
   </div>
 </div>

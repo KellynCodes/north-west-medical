@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import {
   HeroComponent,
   InsuranceComponent,
-  LocationComponent,
-  ProvidersComponent,
   ReviewsComponent,
+  FaqComponent,
+  CtaComponent,
 } from '../../components';
-import { FaqComponent } from '../../components/faq/faq.component';
 
 @Component({
   selector: 'nwmedsurg-home',
@@ -14,8 +13,7 @@ import { FaqComponent } from '../../components/faq/faq.component';
   imports: [
     HeroComponent,
     InsuranceComponent,
-    ProvidersComponent,
-    LocationComponent,
+    CtaComponent,
     ReviewsComponent,
     FaqComponent,
   ],

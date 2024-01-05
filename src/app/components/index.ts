@@ -5,6 +5,5 @@ export * from './footer/footer.component';
 export * from './hero/hero.component';
 export * from './insurance/insurance.component';
 export * from './cta/cta.component';
-export * from './providers/providers.component';
 export * from './reviews/reviews.component';
-export * from './location/location.component';
+export * from './faq/faq.component';

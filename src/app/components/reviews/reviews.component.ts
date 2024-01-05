@@ -14,10 +14,10 @@ export class ReviewsComponent {
   sliderConfig = {
     dots: true,
     draggable: true,
-    infinite: true,
+    infinite: false,
     speed: 1000,
+    autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: 'linear',
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
