@@ -3,7 +3,7 @@
   class="sticky top-0 w-full h-[5rem] bg-gray-100 flex items-center justify-between gap[2%] px-0 md:px-4 z-[999999]"
 >
   <a
-    class="flex items-center justify-center h-full w-[60%] md:w-[28%] bg-primary"
+    class="flex items-center justify-center h-full w-[56%] sm:w-[60%] md:w-[28%] bg-primary"
     routerLink="/"
   >
     <!-- <h1 class="text-white font-semibold text-base">NorthWest Med Surgical</h1> -->
@@ -18,7 +18,7 @@
       class="w-full h-full flex flex-col md:flex-row items-center justify-evenly"
     >
       <li (click)="toggle()">
-        <a routerLink="" fragment="home">Home</a>
+        <a routerLink="/">Home</a>
       </li>
       <li (click)="toggle()">
         <a routerLink="/about">About</a>
@@ -45,9 +45,9 @@
     </ul>
   </div>
 
-  <div class="flex md:hidden justify-around items-center gap-3 w-[38%] h-full">
+  <div class="flex md:hidden justify-around items-center w-[40%] h-full">
     <sosinc-button
-      className="bg-accent text-white hover:bg-hover"
+      className="bg-accent text-xs !px-4 text-white hover:bg-hover"
       label="Contact Us"
       link="/contact"
     />

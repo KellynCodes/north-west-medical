@@ -10,17 +10,12 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './button.component.scss',
 })
 export class ButtonComponent {
-  constructor(private router: Router) {}
+  styles: string =
+    ' flex items-center justify-center rounded-[30px] text-sm md:text-lg text-center transition-all cursor-pointer px-6 py-3';
 
   @Input({ required: true }) label: string = '';
   @Input({ required: true }) link: string = '';
   @Input({ required: false }) fragment: string = '';
   @Input() className?: string;
   @Input() disabled? = false;
-
-  navigate(link: string, fragment: string): void {
-    console.log(link);
-    console.log(fragment);
-    this.router.navigate([link], { fragment: fragment });
-  }
 }
