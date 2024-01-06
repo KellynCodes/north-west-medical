@@ -1,14 +1,22 @@
 <div class="w-full h-auto md:h-[50vh] px-4 bg-primary">
   <div
-    class="w-full lg:w-[80%] mx-auto gap-6 flex flex-col md:flex-row items-center justify-center"
+    class="w-full lg:w-[90%] mx-auto gap-6 flex flex-col md:flex-row items-center justify-center"
   >
     <a
       routerLink="/"
       routerLinkActive="text-hover"
-      class="w-full md:w-[30%] h-fit p-4 flex flex-col items-center justify-between gap-3 cursor-pointer"
+      class="w-full md:w-[38%] h-fit p-4 flex flex-col items-center justify-between gap-3 cursor-pointer"
     >
-      <img class="w-48 h-40" src="../../../assets/images/logo.png" alt="Logo" />
-      <h2>North West Medical Surgical</h2>
+      <img
+        class="w-full h-auto bg-primary"
+        src="../../../assets/images/logo.png"
+        alt="Logo"
+      />
+      <h2 class="text-white">
+        Northwest Medical Surgical Associates offers primary care services to
+        people of all ages. Some minor illnesses can now even be diagnosed and
+        treated online during virtual visits.
+      </h2>
     </a>
     <div
       class="w-full md:w-[30%] h-fit p-4 flex items-center justify-center gap-3"
@@ -24,13 +32,13 @@
           <a routerLink="" fragment="providers"> Providers </a>
         </li>
         <li>
-          <a routerLink="" fragment="location"> Location </a>
-        </li>
-        <li>
           <a routerLink="" fragment="reviews"> Reviews </a>
         </li>
         <li>
-          <a routerLink="" fragment="contact"> Contact Us </a>
+          <a routerLink="/contact"> Contact Us </a>
+        </li>
+        <li>
+          <a routerLink="/appointment">Appointment</a>
         </li>
       </ul>
     </div>
@@ -48,9 +56,6 @@
           <a href="mailto:info&commat;northwestmedsurg.com"
             >info&commat;northwestmedsurg.com</a
           >
-        </li>
-        <li>
-          <a href="https://maps.app.goo.gl/x3pBftm47Jckz8fRA">Location</a>
         </li>
       </ul>
     </div>

@@ -3,11 +3,15 @@
   class="sticky top-0 w-full h-[5rem] bg-gray-100 flex items-center justify-between gap[2%] px-0 md:px-4 z-[999999]"
 >
   <a
-    class="flex items-center justify-center h-full w-[48%] md:w-[18%] bg-primary"
+    class="flex items-center justify-center h-full w-[60%] md:w-[28%] bg-primary"
     routerLink="/"
   >
-    <h1 class="text-white font-semibold text-base">NorthWest Med Surgical</h1>
-    <!-- <img class="h-full w-full" src="../../../assets/images/logo.png" alt="Logo"> -->
+    <!-- <h1 class="text-white font-semibold text-base">NorthWest Med Surgical</h1> -->
+    <img
+      class="h-full w-full"
+      src="../../../assets/images/logo.png"
+      alt="Logo"
+    />
   </a>
   <div [class]="IsOpen ? 'navbar open' : 'navbar close'">
     <ul
@@ -41,9 +45,7 @@
     </ul>
   </div>
 
-  <div
-    class="flex md:hidden justify-around items-center gap-3 w-[50%] md:w-[18%] h-full"
-  >
+  <div class="flex md:hidden justify-around items-center gap-3 w-[38%] h-full">
     <sosinc-button
       className="bg-accent text-white hover:bg-hover"
       label="Contact Us"
