@@ -19,12 +19,12 @@ export const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
-    title: 'About',
+    title: 'About Us',
   },
   {
     path: 'services',
     component: ServicesComponent,
-    title: 'About',
+    title: 'Our Services',
   },
   { path: 'not-found', component: NotfoundComponent, title: 'Page not found' },
   { path: '**', redirectTo: 'not-found', pathMatch: 'full' },
