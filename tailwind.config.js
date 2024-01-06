@@ -23,10 +23,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        accent: "#ef4444",
+        accent: "#ef4444cd",
         primary: "#1F2B6C",
         white: "#FCFEFE",
-        hover: "#ef4444cd",
+        hover: "#ef4444",
       },
       screens: {
         "2xl": "1600px",
