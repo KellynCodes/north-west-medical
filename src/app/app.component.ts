@@ -9,4 +9,12 @@ import { FooterComponent, NavbarComponent } from './components';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  isLoading: boolean = false;
+  ngOnInit(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000);
+  }
+}
