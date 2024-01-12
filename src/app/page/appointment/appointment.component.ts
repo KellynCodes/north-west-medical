@@ -27,7 +27,6 @@ export class AppointmentComponent {
   ngOnInit(): void {
     this.appointmentForm = this.fb.group({
       name: ['', Validators.required],
-      gender: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.pattern('^\\+(?:[0-9] ?){6,14}[0-9]$')]],
       date: [new Date().toDateString(), Validators.required],
@@ -54,13 +53,13 @@ export class AppointmentComponent {
     try {
       this.isSending.set(true);
       const response = await emailjs.send(
-        'service_qzft4dg',
-        'template_10esckf',
+        'service_i2c31r8',
+        'template_jkvef1e',
         {
           to_name: 'Specialized Orthopedic Surgeons',
           ...this.appointmentForm.value,
         },
-        'S8QJQci9NComKenmu'
+        'UQiKJHtSM88EGtWsp'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending.set(false);
@@ -87,6 +86,7 @@ export class AppointmentComponent {
       }
     } catch (error: any) {
       if (error?.status != HttpStatusCode.Ok) {
+        console.log(error);
         this.isSending.set(false);
         this.toastr.error('Message not sent. Try again.');
         return;

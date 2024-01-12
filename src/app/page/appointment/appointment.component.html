@@ -43,6 +43,10 @@
           appointmentForm.get('email')?.hasError('required')){
 
           <h6 class="text-red-500">Email is required.</h6>
+          } @if( appointmentForm.get('email')?.touched &&
+          appointmentForm.get('email')?.hasError('email')){
+
+          <h6 class="text-red-500">Email is not valid.</h6>
           }
         </div>
 

@@ -53,13 +53,13 @@ export class ContactComponent {
     try {
       this.isSending.set(true);
       const response = await emailjs.send(
-        'service_qzft4dg',
-        'template_ojn12rc',
+        'service_i2c31r8',
+        'template_us3scl7',
         {
           to_name: 'Specialized Orthopedic Surgeons',
           ...this.contactForm.value,
         },
-        'S8QJQci9NComKenmu'
+        'UQiKJHtSM88EGtWsp'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending.set(false);
